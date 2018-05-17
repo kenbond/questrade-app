@@ -17,8 +17,11 @@ else {
 	 app.listen(3001);
 }
 
+var context = require(".context");
 var auth = require("./auth/auth");
 var accounts = require("./accounts/accounts");
+
+context.initConfig();
 
 app.get("/", (req, res) => res.send("test"));
 
@@ -30,3 +33,4 @@ app.get("/api/auth", auth.authorize);
 
 app.get("/api/accounts", accounts.accounts);
 app.get("/api/positions", accounts.positions);
+app.get("/api/activities", accounts.activities);

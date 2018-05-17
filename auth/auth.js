@@ -4,7 +4,7 @@ const request = require('request');
 
 const refreshTokenUrl = fs.readFileSync(path.join(__dirname, "..", "config", "refreshTokenUrl.txt"), "utf8");
 
-var config = require("../config");
+var context = require("../context");
 
 function authorizeWithRefreshToken(req, res) {
 	var refreshToken =  fs.readFileSync("./refreshToken.txt", "utf8");
@@ -29,8 +29,9 @@ function authorizeWithRefreshToken(req, res) {
 
 		var b = JSON.parse(body);
 		console.log(body);
-		config.setApiBaseUrl(b.api_server);
-		fs.writeFileSync("./accessToken.txt", b.access_token);
+
+		context.initAuth(b.access_token, b.refresh_token, b.api_server);
+		
 		res.send("ok");
 	});
 };

@@ -5,7 +5,8 @@
   "dependencies": {
     "babel-core": "^6.26.0 ",
     "express": "^4.16.2",
-    "npm": "^5.7.1",
+    "mysql": "2.15.0",
+    "npm": "^5.8.0",
     "request": "2.85.0"
   },
   "scripts": {
