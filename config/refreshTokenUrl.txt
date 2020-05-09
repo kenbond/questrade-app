@@ -1,1 +1,0 @@
-https://login.questrade.com/oauth2/token?grant_type=refresh_token&refresh_token={0}

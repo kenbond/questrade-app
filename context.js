@@ -4,8 +4,8 @@ const path = require('path');
 var config = {};
 
 exports.initConfig = function(env) {
-	config = JSON.parse(fs.readFileSync(path.join(__dirname, "config." + env + ".json"), "utf8"));
-	exports.databaseSettings = config.database;
+	config = JSON.parse(fs.readFileSync(path.join(__dirname, "config.json"), "utf8"));
+	//exports.databaseSettings = config.database;
 }
 
 exports.initAuth = function(accessToken, refreshToken, baseUrl) {

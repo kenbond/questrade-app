@@ -1,1 +1,0 @@
-https://login.questrade.com/oauth2/authorize?client_id=6He9wPcCvXgJG0fvPLSQW7RKWgCmdg&response_type=code&redirect_uri=https://www.kenbondma.com:8080/api/auth
